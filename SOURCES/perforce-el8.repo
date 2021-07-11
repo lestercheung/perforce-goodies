@@ -1,0 +1,6 @@
+[perforce-el8]
+name=Perforce
+baseurl=https://package.perforce.com/yum/rhel/8/$basearch
+gpgcheck=1
+enabled=1
+gpgkey=https://package.perforce.com/perforce.pubkey
