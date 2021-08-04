@@ -1,0 +1,9 @@
+# Copy to $HOME/.local/share/applications or /usr/share/applications
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=P4V
+Icon=/opt/p4v/lib/P4VResources/icons/p4v.svg
+Exec=/opt/p4v/bin/p4v
+Terminal=false
+Categories=Development;
