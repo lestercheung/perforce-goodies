@@ -1,0 +1,10 @@
+[project]
+name = "p4cli"
+version = "0.1.0"
+description = "A Python wrapper for the P4 CLI"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+p4cli = "p4cli.cli:main"
