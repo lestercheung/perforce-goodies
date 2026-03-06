@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 '''
+Revert files that are pending to be added but only when an identical file already exists in Perforce.
+
 This shouldn't be needed but `p4 rec` would actually allow you to add files that already exist in Perforce.
 
     $  poc p4 sync ...#0
@@ -44,7 +46,7 @@ import argparse
 from pprint import pprint as pp  # pprint.pp() only available from Python 3.8+
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Revert files that exists in Perforce, safely.")
+    parser = argparse.ArgumentParser(description="Revert pending adds that exists in Perforce, safely.")
     parser.add_argument("-c", "--client", help="Perforce client name")
     parser.add_argument("-u", "--user", help="Perforce user name")
     parser.add_argument("-p", "--port", help="Perforce server port")
