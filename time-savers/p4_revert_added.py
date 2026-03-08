@@ -81,7 +81,7 @@ def main() -> None:
         p4.port = cfg.port
     p4.connect()
 
-    opened_files = p4.run_opened(f'-c {chg}'.split() if cfg.change else '-c default'.split())
+    opened_files = p4.run_opened(f'-c {cfg.change}'.split() if cfg.change else '-c default'.split())
     for of in opened_files:
         if of['action'] != 'add':
             continue
