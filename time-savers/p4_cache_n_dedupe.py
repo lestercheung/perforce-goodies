@@ -86,7 +86,7 @@ def do_cache(cfg: argparse.Namespace):
         print(f"Caching {depot_path}...")
         for f in p4.run_fstat("-Ol", depot_path):
             # pp(f)
-            if f.get("headAction") == "delete":
+            if f.get("headAction") in ('delete', 'move/delete'):
                 continue
             cux.execute(
                 """
